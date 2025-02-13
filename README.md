@@ -1,64 +1,47 @@
-1. Project Overview
-The goal of this project is to create a Decision Tree classifier to predict the species of a flower based on certain physical features. This classifier uses a popular flower dataset that contains four key measurements: sepal length, sepal width, petal length, and petal width. By analyzing these features, the Decision Tree model can learn to distinguish between different species of flowers.
+This repository contains Python implementations for analyzing multiple datasets, focusing on customer behavior using Sentiment Analysis, Decision Tree, and K-Means Clustering. Each technique is applied to different datasets to provide insights into customer segmentation and behavior patterns.
 
-2. Dataset Description
-The dataset includes the following:
+Datasets
+Mall Customer Dataset
+This dataset contains information about customers who visit a mall. It includes attributes such as:
+Customer ID
+Age
+Annual Income
+Spending Score
+Review/Feedback (for Sentiment Analysis)
+Additional Dataset 1 (Decision Tree)
+This dataset is used for Decision Tree Classification to predict customer categories based on attributes like demographics or spending behavior.
 
-Features: These are the attributes or independent variables that will help the model make predictions:
+Additional Dataset 2 (K-Means Clustering)
+This dataset is used for K-Means Clustering to segment customers into distinct groups based on similar characteristics.
 
-Sepal Length (in cm)
-Sepal Width (in cm)
-Petal Length (in cm)
-Petal Width (in cm)
-Target: This is the dependent variable, which we want the model to predict. In this case, it’s the flower species (such as Setosa, Versicolor, or Virginica if using the famous Iris dataset).
+Methods
+1. Sentiment Analysis (Mall Customer Dataset)
+Sentiment Analysis is performed on customer reviews/feedback to classify their sentiments into positive, neutral, or negative categories. This provides valuable insights into customer satisfaction and feedback trends.
 
-The classifier will learn patterns in the data based on these features to identify the correct species.
+Input: Customer review/feedback text.
+Output: Sentiment (Positive/Negative/Neutral).
+Algorithm: Natural Language Processing (NLP) using libraries like NLTK or TextBlob.
+2. Decision Tree Classification (Additional Dataset 1)
+The Decision Tree algorithm is applied to classify customers based on their demographic and behavioral features, such as age, income, and spending score. It helps predict customer categories like high spender, low spender, etc.
 
-3. Steps in the Project
-Let’s go through the main steps in detail:
+Input: Various customer attributes (e.g., age, income, spending score).
+Output: Predicted customer category.
+Algorithm: Scikit-learn's Decision Tree Classifier.
+3. K-Means Clustering (Additional Dataset 2)
+K-Means Clustering is used to group customers into distinct clusters based on similar characteristics. This segmentation helps in targeting specific customer groups with personalized offers or services.
 
-Step 1: Data Preprocessing
-Load the dataset into the environment (e.g., using pandas if working in Python).
-Explore the dataset to understand the distribution of values, identify any missing data, and get a feel for the relationships between features.
-Handle Missing Values: If there are any missing entries, we can decide whether to fill, replace, or drop these values. For this dataset, typically no missing values are present, so this may be skipped.
-Step 2: Splitting the Data
-Training Set: Used to train the model to understand the relationship between the features and the target variable.
-Testing Set: Used to evaluate how well the model generalizes to new data. In this case, accuracy metrics calculated on this test set help us understand the model’s performance.
-Step 3: Model Training
-Training Accuracy: The model's performance on the training data. In your case, you achieved a Training Accuracy of 0.9902, meaning that the model correctly classified almost 99% of the training examples.
-Step 4: Model Evaluation
-Testing Accuracy: This measures the accuracy on the test set. Your model achieved a Testing Accuracy of 0.9545, which indicates that the model correctly classified about 95% of the test examples.
-Confusion Matrix: This matrix provides a detailed breakdown of model performance by showing the counts of true positives, true negatives, false positives, and false negatives. Each row in the confusion matrix corresponds to the actual class, while each column represents the predicted class. The diagonal elements indicate correct predictions, while the off-diagonal elements reveal misclassifications.
-4. Summary of the Model's Performance
-Your model’s high accuracy scores for both training and testing sets indicate that it generalizes well to new data without being overly complex or overfitted. This makes it a good model for this task, as it balances learning from the training data while still performing well on unseen examples.
-5. Key Insights
-A high accuracy on both training and test sets suggests that the Decision Tree model performs well in this classification task.
-The confusion matrix gives further insights into specific types of misclassifications, helping refine the model if needed.
+Input: Customer attributes (e.g., age, income, spending score).
+Output: Customer clusters.
+Algorithm: Scikit-learn's KMeans Clustering.
+Prerequisites
+Make sure you have the following libraries installed:
 
-Dataset
-The dataset includes:
+pandas
+numpy
+matplotlib
+scikit-learn
+nltk or textblob (for sentiment analysis)
+seaborn
 
-Features:
-Sepal Length
-Sepal Width
-Petal Length
-Petal Width
-Target: Flower species (categorical)
-Project Details
-This project involves:
-
-Data Preprocessing: Loading and analyzing the data, handling any missing values, and preparing it for model training.
-Model Training: Building a Decision Tree classifier to train on the flower dataset.
-Model Evaluation: Using a Confusion Matrix to evaluate the performance, as well as calculating training and testing accuracy.
-Results
-Training Accuracy: 0.9902
-Testing Accuracy: 0.9545
-Confusion Matrix: (Add a visualization or matrix here if possible)
-Code
-The core steps in the code include:
-
-Importing necessary libraries
-Loading and exploring the dataset
-Splitting the data into training and test sets
-Training the Decision Tree model
-Evaluating the model with a Confusion Matrix and accuracy scores
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
