@@ -44,5 +44,6 @@ nltk or textblob (for sentiment analysis)
 seaborn
 
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Kanhaiya1161/NextGen-Intern/blob/main/LICENSE) file for details.
+
 
